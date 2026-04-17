@@ -16,7 +16,7 @@ WIBUKE GUSHYIRA LINK HANO ....
 
 ---
 
-## How to run the the script
+## How to run the script
 
 To run this project, clone the repository and execute the setup script:
 
@@ -34,7 +34,7 @@ When you run the script, you will be asked to enter the preferred name, if you d
 
 Then when you enter a name the script will create a directory based on your input and then inside it, it builds files and folders(Helpers and report). Then back to what the user is prompted, the script will ask the user if they want to update the attendance threshold. 
 
-User will have to choose between yes or no, if yes, you will enter new values of warning and failure, and they will update the ones in the `config.json`. Through the use of `sed` command. Note that the user has to enter a number between 0 and 10, if no the script will keep its default values. 'warning = 75', 'failure = 50' 
+User will have to choose between yes or no, if yes, you will enter new values of warning and failure, and they will update the ones in the `config.json`. Through the use of `sed` command. Note that the user has to enter a number between 0 and 100, if no the script will keep its default values. 'warning = 75', 'failure = 50' 
 
 ---
 
@@ -68,4 +68,4 @@ attendance_tracker_{project_name}/
 
 ## Health check
 
-At the end the script checks if python 3 is installed on the system. If it is the system prints out that it is installed if not, it prints a warning message if it is not installed.
+At the end the script checks if python 3 is installed on the system using `python --version` command. If it is the system prints out that it is installed if not, it prints a warning message if it is not installed.
