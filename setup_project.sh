@@ -5,7 +5,7 @@
 cleaner(){
 echo "You interrupted the process! Archiving now..."
 tar -czf attendance_tracker_${project_name}_archive.tar.gz attendance_tracker_$project_name
-rm -rf attendance_tracker_$input
+rm -rf attendance_tracker_${project_name}
 echo "Archive saved. Exiting..."
 exit 1
 }
@@ -42,7 +42,7 @@ read -p "Do you want to update the attendance threshold? (yes/no): " option
 
 #For warning threshold
 
-if [ $option = 'yes' ]; then
+if [ "$option" = "yes" ]; then
 while true; do
 	read -p "Enter the new value of warning out of 100: " warning_threshold
 	if [ -z "$warning_threshold" ]; then
