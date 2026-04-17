@@ -34,7 +34,7 @@ When you run the script, you will be asked to enter the preferred name, if you d
 
 Then when you enter a name the script will create a directory based on your input and then inside it, it builds files and folders(Helpers and report). Then back to what the user is prompted, the script will ask the user if they want to update the attendance threshold. 
 
-User will have to choose between yes or no, if yes, you will enter new values of warning and failure, and they will update the ones in the `config.json`. Through the use of `sed` command. Note that the user has to enter a number between 0 and 100, if no the script will keep its default values. 'warning = 75', 'failure = 50' 
+User will have to choose between yes or no, if yes, you will enter new values of warning and failure, and they will update the ones in the `config.json`. Through the use of `sed` command. Note that the user has to enter a number between 0 and 100, if not the script will keep its default values. 'warning = 75', 'failure = 50' 
 
 ---
 
@@ -42,11 +42,11 @@ User will have to choose between yes or no, if yes, you will enter new values of
 
 The archive feature is triggered by pressing `Ctrl+C` at any point while the scriptis runnning.
 
-To implememnt this I used a `trap` that cathes the SIGINT signal. Here is what happens when you press `Ctrl+c`:
+To implement this I used a `trap` that cathes the SIGINT signal. Here is what happens when you press `Ctrl+C`:
 
 - The script catches the interruption before it exits
 - It uses `tar -czf` to keep whatever has been created so far into a compressed archive named `attendance_tracker_{project_name}_archive.tar.gz`
--It then deletes the incomplete project directory using `rm -rf` to keep the workspace clean
+- It then deletes the incomplete project directory using `rm -rf` to keep the workspace clean
 - Finally it exits safely
 
 ---
