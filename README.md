@@ -12,7 +12,7 @@ I started by thinking about what the script needed to do for instance to get inp
 
 To briefly know how I briefly approached the solution, click on the video link below, which contains detailed information, of how I approached the solution, and a practical work through of how the script runs.
 
-WIBUKE GUSHYIRA LINK HANO ....
+https://drive.google.com/file/d/1oC2HtciN9A1bmzh2E7m40L7TH9q3Amcq/view?usp=sharing
 
 ---
 
